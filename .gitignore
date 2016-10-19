@@ -1,0 +1,82 @@
+//Sistemas Microprocesados
+//Mario Guerra 20/10/2016
+//Deber#1 - juego de luces
+int contador1=0;
+int contador2=0;
+void setup() {
+  // put your setup code here, to run once:
+  pinMode (0, OUTPUT);
+  pinMode (1, OUTPUT);
+  pinMode (2, OUTPUT);
+  pinMode (3, OUTPUT);
+  pinMode (4, OUTPUT);
+  pinMode (5, OUTPUT);
+  pinMode (6, OUTPUT);
+  pinMode (7, OUTPUT);
+  pinMode (8, OUTPUT);
+  pinMode (9, OUTPUT);
+  pinMode (10, OUTPUT);
+  pinMode (11, OUTPUT);
+  pinMode (12, OUTPUT);
+  pinMode (13, OUTPUT);
+
+  }
+//Juego de luces 1 : las luces se encenderan saltando una posicion
+  void loop() {
+    
+    for (; contador1 < 14; contador1 = contador1 + 2)
+    {
+      digitalWrite(contador1, HIGH);
+      delay(200);
+    }
+
+    for (contador1 =14; contador1 >= 0; contador1 = contador1 - 2)
+    {
+      digitalWrite(contador1, HIGH);
+      delay(200);
+    }
+
+    for ( ; contador1 < 14; contador1=contador1+2)
+    {
+      digitalWrite(contador1, LOW);
+      delay(200);
+    }
+ for (contador1 =14 ; contador1 >= 14; contador1=contador1-2) {
+      digitalWrite(contador1, LOW);
+      delay(200);
+    }
+  //Juego de luces 2 : dos luces  iran saltando de posicion
+for (contador1 = 1, contador2=3; contador1 < 14; contador1 = contador1 +2,contador2 = contador2 +2) {
+      digitalWrite(contador1, HIGH);
+      digitalWrite(contador2, HIGH);
+      delay(200);
+      digitalWrite(contador1,LOW);
+      digitalWrite(contador2, LOW);
+      delay(200);
+         }
+     
+  //Juego de luces 3: las luces se encienden desde la mitad para lugeo apagarse y encenderse nuevamente desde el inicio hasta la mitad y apagarse nuevamente
+    for (contador1=8; contador1 < 14; contador1 ++)
+    {
+      digitalWrite(contador1, HIGH);
+      delay(200);
+    }
+
+    for (contador1 =8; contador1 <14; contador1 ++)
+    {
+      digitalWrite(contador1, LOW);
+      delay(200);
+    }
+
+    for ( contador1 =0; contador1 < 8; contador1++)
+    {
+      digitalWrite(contador1, HIGH);
+      delay(200);
+    }
+ for (contador1=0 ; contador1 <8; contador1++) {
+      digitalWrite(contador1, LOW);
+      delay(200);
+    }
+      
+    
+  }
